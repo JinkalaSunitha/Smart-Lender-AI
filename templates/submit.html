@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="result-page">
+
+    <div class="result-card">
+
+        <h1>🏦 Smart Lender AI</h1>
+
+        <h2>Prediction Result</h2>
+
+        <div class="prediction-box">
+
+            <h1 style="color:{{color}}">
+
+                {{ prediction }}
+
+            </h1>
+
+        </div>
+
+        <div class="summary">
+
+            <div class="summary-item">
+
+                <h3>Total Income</h3>
+
+                <p>₹ {{ total_income }}</p>
+
+            </div>
+
+            <div class="summary-item">
+
+                <h3>Estimated EMI</h3>
+
+                <p>₹ {{ emi }}</p>
+
+            </div>
+
+        </div>
+
+        <div class="button-group">
+
+            <a href="/predict">
+
+                <button class="primary-btn">
+
+                    Predict Another Loan
+
+                </button>
+
+            </a>
+
+            <a href="/">
+
+                <button class="secondary-btn">
+
+                    Home
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

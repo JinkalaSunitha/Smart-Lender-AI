@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loan Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h1>🏦 Smart Lender AI</h1>
+
+<p>Fill the applicant details below</p>
+
+<form action="/submit" method="POST">
+
+<div class="grid">
+
+<div>
+
+<label>Gender</label>
+
+<select name="gender" required>
+
+<option value="1">Male</option>
+
+<option value="0">Female</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Married</label>
+
+<select name="married" required>
+
+<option value="1">Yes</option>
+
+<option value="0">No</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Dependents</label>
+
+<select name="dependents" required>
+
+<option value="0">0</option>
+
+<option value="1">1</option>
+
+<option value="2">2</option>
+
+<option value="3">3+</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Education</label>
+
+<select name="education" required>
+
+<option value="0">Graduate</option>
+
+<option value="1">Not Graduate</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Self Employed</label>
+
+<select name="self_employed" required>
+
+<option value="1">Yes</option>
+
+<option value="0">No</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Applicant Income</label>
+
+<input type="number" name="applicant_income" required>
+
+</div>
+
+<div>
+
+<label>Coapplicant Income</label>
+
+<input type="number" name="coapplicant_income" required>
+
+</div>
+
+<div>
+
+<label>Loan Amount</label>
+
+<input type="number" name="loan_amount" required>
+
+</div>
+
+<div>
+
+<label>Loan Amount Term</label>
+
+<input type="number" name="loan_term" value="360" required>
+
+</div>
+
+<div>
+
+<label>Credit History</label>
+
+<select name="credit_history" required>
+
+<option value="1">Good (1)</option>
+
+<option value="0">Bad (0)</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Property Area</label>
+
+<select name="property_area" required>
+
+<option value="0">Rural</option>
+
+<option value="1">Semi Urban</option>
+
+<option value="2">Urban</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="button-area">
+
+<button type="submit">
+
+Predict Loan Approval
+
+</button>
+
+</div>
+
+</form>
+
+<div class="back-home">
+
+<a href="/">← Back to Home</a>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
